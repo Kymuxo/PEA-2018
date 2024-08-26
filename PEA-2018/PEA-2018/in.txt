@@ -1,0 +1,116 @@
+funinteger firstf(parinteger a)
+{
+varinteger g;
+g=10;
+g=g*a*a+a;
+recovery g;
+}
+funstring secondf(parstring a)
+{
+varstring aaa;
+aaa=" AND some text";
+varstring bbb;
+bbb=concat(a,aaa);
+varinteger aabbcc;
+varinteger x;
+x = (1+5)/2;
+aabbcc=firstf(x, 12);
+output "aabbcc = ";
+output aabbcc;
+output;
+recovery bbb;
+}
+funstring thirdf(parstring a)
+{
+varstring b;
+b="HELLOqwertyuWORLDiopasdfghjklzxcvbnm+= ";
+varstring buffer;
+buffer=strsub(b,1,5);
+a=concat(a,buffer);
+buffer=strsub(b,39,39);
+a=concat(a,buffer);
+buffer=strsub(b,13,17);
+a=concat(a,buffer);
+recovery a;
+}
+begin
+{
+output "STANDART TESTING";
+varstring a;
+varstring b;
+varstring result;
+varinteger c;
+varinteger d;
+a="first string";
+b="second string";
+c=2;
+d=5;
+output "a =";
+output a;output;
+output "b =";
+output b;output;
+output "c =";
+output c;output;
+output "d =";
+output d;output;
+varstring forccc;
+result=concat(a,b);
+output "result of SUM a and b = ";
+output result;
+output;
+result=strsub(a,c,d);
+output "result of SUB a from 2 to 5 = ";
+output result;
+c=1+lenstr(a)+1;
+output "LENGTH of a = ";
+output c;
+output;output;
+forccc=secondf(b);
+output forccc;
+output ;output;
+output "CHECK DIVISION";output;
+		c=100;
+		d=51;
+		output "c = ";
+		output c;
+output;
+		output "d = ";
+		output d;
+		output;
+
+		c=c/d;
+		output "after division";output;
+		output "c = ";
+		output c;
+output;
+		output "d = ";
+		output d;
+output;
+output;
+output "TESTING SUMMING string to HELLO WORLD and get mystring with this answer";
+varstring testingSumming;
+testingSumming="start string   ";
+output;
+testingSumming=thirdf(testingSumming);
+output ;
+output testingSumming;
+output;output;
+output "CHECK PROGRAM on using calling function in EXPRES-SION";output;
+output "BIG hard expression";output;
+varinteger ggg;
+
+
+
+
+
+
+output "5+lenstr(testingSumming)*5*(lenstr(a)/lenstr(b)+c-d/(c+d-lenstr(a)*100))";
+output;
+ggg=5+lenstr(testingSumming)*5*(lenstr(a)/lenstr(b)+c-d/(c+d-lenstr(a)*100)); 
+output ggg;
+output;
+}
+;; ; ; ;;
+;
+;
+;;
